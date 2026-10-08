@@ -28,6 +28,59 @@ Development work includes:
 
 These components are experimental and do not yet constitute a complete automated tracking system.
 
+
+## Computer Vision Pipeline
+
+The following screenshots demonstrate the experimental
+image-processing workflow used by CoX Tracker.
+
+### 1. Original RuneLite Screenshot
+
+The application processes RuneLite screenshots to
+locate raid information panels.
+
+![Original Screenshot](docs/screenshots/01-original-screenshot.png)
+
+### 2. Template Matching
+
+OpenCV template matching locates the "Total" anchor
+within the screenshot.
+
+The example below shows a detection confidence of 0.849.
+
+![Template Matching](docs/screenshots/02-template-matching.png)
+
+### 3. Points Row Extraction
+
+The relevant row is extracted from the detected panel.
+
+![Points Row](docs/screenshots/03-points-row.png)
+
+### 4. Binary Mask Generation
+
+Image preprocessing isolates bright characters
+to facilitate character segmentation.
+
+![Binary Mask](docs/screenshots/04-binary-mask.png)
+
+### 5. Character Segmentation
+
+Vertical pixel projection is used to identify
+individual character groups.
+
+In this example, the value "26,837" is segmented
+into six character groups.
+
+![Character Segmentation](docs/screenshots/05-character-segmentation.png)
+
+### Current Limitations
+
+- OCR accuracy is still under evaluation.
+- Template matching confidence varies between screenshots.
+- The digit template dataset is experimental.
+- Automated raid analytics have not yet been implemented.
+
+
 ## Technology Stack
 
 - Python 3.12
