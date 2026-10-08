@@ -1,0 +1,51 @@
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Temporary and debug outputs
+debug_candidates/
+debug_crops/
+debug_digits/
+debug_matches/
+debug_ocr/
+debug_panels/
+
+# Local datasets and screenshots
+data/
+screenshots/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+build/
+dist/
+*.egg-info/
+
+# Generated OCR and recognition outputs
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
